@@ -5,40 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sheril Mary Geo | Graduate Electrical Engineer</title>
 
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --bg-main: #0b0f14;
+      --bg-card: rgba(255, 255, 255, 0.04);
+      --border-card: rgba(255, 255, 255, 0.08);
+
+      --text-main: #f2f4f8;
+      --text-muted: #a7b0c0;
+
+      --neon-primary: #2fffdc;   /* Neon Teal */
+      --neon-secondary: #f5c77a; /* Soft Gold */
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      max-width: 960px;
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+      background: radial-gradient(circle at top left, #121a24, #0b0f14 60%);
+      color: var(--text-main);
       line-height: 1.7;
-      color: #222;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 70px 24px;
     }
 
     h1 {
+      font-size: 42px;
       margin-bottom: 6px;
+      color: var(--neon-primary);
+      letter-spacing: -0.6px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 14px;
+      color: var(--neon-secondary);
+      letter-spacing: -0.3px;
     }
 
     .subtitle {
-      margin-top: 0;
-      color: #555;
-      font-size: 17px;
+      font-size: 18px;
+      color: var(--text-muted);
+      margin-bottom: 50px;
     }
 
     .section {
-      margin-top: 36px;
+      margin-top: 64px;
+    }
+
+    p {
+      color: var(--text-muted);
+      margin-bottom: 14px;
     }
 
     ul {
-      padding-left: 18px;
+      padding-left: 20px;
     }
 
     li {
       margin-bottom: 8px;
+      color: var(--text-muted);
     }
 
     a {
-      color: #0b63ce;
+      color: var(--neon-primary);
       text-decoration: none;
+      font-weight: 500;
     }
 
     a:hover {
@@ -46,174 +88,181 @@
     }
 
     .card {
-      border: 1px solid #ddd;
-      padding: 18px;
-      border-radius: 10px;
-      margin-top: 14px;
-      background: #fafafa;
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 16px;
+      padding: 22px;
+      margin-top: 22px;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 24px rgba(47, 255, 220, 0.12);
     }
 
     .tag {
       display: inline-block;
-      padding: 5px 12px;
-      border: 1px solid #ccc;
-      border-radius: 16px;
-      margin: 6px 8px 0 0;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin: 8px 8px 0 0;
       font-size: 14px;
-      background: #fff;
+      background: rgba(47, 255, 220, 0.12);
+      color: var(--neon-primary);
+      border: 1px solid rgba(47, 255, 220, 0.25);
+    }
+
+    footer {
+      margin-top: 90px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-card);
+      color: var(--text-muted);
+      font-size: 14px;
+      text-align: center;
     }
   </style>
 </head>
 
 <body>
+  <div class="container">
 
-  <h1>Sheril Mary Geo</h1>
-  <p class="subtitle">
-    Graduate Electrical Engineer | M.Sc. Energy Science (Trinity College Dublin)
-  </p>
-
-  <!-- ===== SUMMARY ===== -->
-  <div class="section">
-    <h2>Professional Summary</h2>
-    <p>
-      Graduate Electrical and Electronics Engineer currently pursuing a Master’s degree in Energy Science
-      at Trinity College Dublin. I have hands-on internship exposure in electrical utilities, power
-      distribution, and embedded systems environments. My academic and project work focuses on power
-      systems, power electronics, and energy technologies, supported by practical experience in
-      modelling and analysis using MATLAB/Simulink and foundational programming skills in Python.
+    <!-- HERO -->
+    <h1>Sheril Mary Geo</h1>
+    <p class="subtitle">
+      Graduate Electrical Engineer | M.Sc. Energy Science (Trinity College Dublin)
     </p>
-  </div>
 
-  <!-- ===== EDUCATION ===== -->
-  <div class="section">
-    <h2>Education</h2>
-    <ul>
-      <li>
-        <strong>M.Sc. Energy Science</strong> — Trinity College Dublin<br>
-        <em>Currently pursuing</em>
-      </li>
-      <li>
-        <strong>B.Tech Electrical & Electronics Engineering</strong> — APJ Abdul Kalam Technological University (KTU)<br>
-        CGPA: 7.49 | 2020–2024
-      </li>
-    </ul>
-  </div>
-
-  <!-- ===== EXPERIENCE ===== -->
-  <div class="section">
-    <h2>Professional Experience</h2>
-
-    <div class="card">
-      <strong>Electrical Section Intern — Kerala State Electricity Board (KSEBL)</strong>
-      <ul>
-        <li>Assisted with power distribution and transformer-related activities</li>
-        <li>Observed inspection, safety, and maintenance procedures in a regulated utility environment</li>
-        <li>Supported technical documentation and basic fault identification under supervision</li>
-      </ul>
-      <a href="KSEB - Internship.pdf" target="_blank">View Certificate</a>
-    </div>
-
-    <div class="card">
-      <strong>IoT & Embedded Systems Intern — Keltron Knowledge Centre</strong>
-      <ul>
-        <li>Worked with sensors, microcontrollers, and embedded system fundamentals</li>
-        <li>Assisted in testing, configuration, and troubleshooting activities</li>
-      </ul>
-      <a href="KELTRON - Internship.pdf" target="_blank">View Certificate</a>
-    </div>
-
-    <div class="card">
-      <strong>Power Distribution & Safety Intern (Online) — Alfa Electric Power Service</strong>
-      <ul>
-        <li>Gained foundational knowledge of electrical power distribution systems</li>
-        <li>Learned key electrical safety practices and standards</li>
-      </ul>
-      <a href="Alfa.jpg" target="_blank">View Certificate</a>
-    </div>
-
-  </div>
-
-  <!-- ===== PROJECT ===== -->
-  <div class="section">
-    <h2>Final Year Engineering Project</h2>
-
-    <div class="card">
-      <strong>
-        Mitigation of Harmonics Using Sector-Based SVPWM for a 3-Level Inverter-Fed Induction Motor
-      </strong>
-
+    <!-- SUMMARY -->
+    <div class="section">
+      <h2>Professional Summary</h2>
       <p>
-        Final-year engineering project focused on reducing harmonic distortion in induction motor drives
-        using a sector-based Space Vector Pulse Width Modulation (SVPWM) technique for a three-level
-        inverter. The project involved modelling, simulation, and performance evaluation using
-        MATLAB/Simulink.
+        Graduate Electrical and Electronics Engineer currently pursuing a Master’s degree in Energy Science
+        at Trinity College Dublin. I have internship exposure in electrical utilities, power distribution,
+        and embedded systems environments. My academic and project work focuses on power systems, power
+        electronics, and energy technologies, supported by practical experience in modelling and analysis
+        using MATLAB/Simulink and foundational programming skills in Python.
       </p>
-
-      <p>
-        Comparative analysis was conducted between conventional two-level SVPWM, conventional three-level
-        SVPWM, and the proposed sector-based approach. Harmonic performance was evaluated using FFT-based
-        Total Harmonic Distortion (THD) analysis, demonstrating improved waveform quality with the proposed
-        method, particularly at higher modulation indices.
-      </p>
-
-      <p>
-        <strong>Tools & Technologies:</strong>
-        MATLAB, Simulink, Power Electronics, SVPWM, FFT / THD Analysis
-      </p>
-
-      <a href="SVPWM project report.pdf" target="_blank">Download Project Report (PDF)</a>
     </div>
 
+    <!-- EDUCATION -->
+    <div class="section">
+      <h2>Education</h2>
+      <ul>
+        <li>
+          <strong>M.Sc. Energy Science</strong> — Trinity College Dublin (Currently pursuing)
+        </li>
+        <li>
+          <strong>B.Tech Electrical & Electronics Engineering</strong> —
+          APJ Abdul Kalam Technological University (KTU), CGPA: 7.49 (2020–2024)
+        </li>
+      </ul>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="section">
+      <h2>Professional Experience</h2>
+
+      <div class="card">
+        <strong>Electrical Section Intern — Kerala State Electricity Board (KSEBL)</strong>
+        <ul>
+          <li>Assisted with power distribution and transformer-related activities</li>
+          <li>Observed inspection, safety, and maintenance procedures in a regulated utility environment</li>
+          <li>Supported technical documentation and basic fault identification under supervision</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>IoT & Embedded Systems Intern — Keltron Knowledge Centre</strong>
+        <ul>
+          <li>Worked with sensors, microcontrollers, and embedded system fundamentals</li>
+          <li>Assisted in testing, configuration, and troubleshooting activities</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>Power Distribution & Safety Intern — Alfa Electric Power Service</strong>
+        <ul>
+          <li>Gained foundational knowledge of electrical power distribution systems</li>
+          <li>Learned electrical safety practices and standards</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PROJECT -->
+    <div class="section">
+      <h2>Final Year Engineering Project</h2>
+
+      <div class="card">
+        <strong>
+          Mitigation of Harmonics Using Sector-Based SVPWM for a 3-Level Inverter-Fed Induction Motor
+        </strong>
+        <p>
+          Final-year engineering project focused on reducing harmonic distortion in induction motor drives
+          using a sector-based Space Vector Pulse Width Modulation (SVPWM) technique for a three-level
+          inverter. The work involved modelling, simulation, and performance evaluation using MATLAB/Simulink.
+        </p>
+        <p>
+          Comparative analysis was performed between conventional two-level SVPWM, conventional three-level
+          SVPWM, and the proposed sector-based approach using FFT-based Total Harmonic Distortion (THD)
+          analysis, demonstrating improved waveform quality at higher modulation indices.
+        </p>
+        <p>
+          <strong>Tools & Technologies:</strong>
+          MATLAB, Simulink, Power Electronics, SVPWM, FFT / THD Analysis
+        </p>
+      </div>
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div class="section">
+      <h2>Certifications & Professional Activities</h2>
+      <ul>
+        <li>
+          Renewable Energy Technology Fundamentals — Coursera (University of Colorado Boulder), Jan 2025
+        </li>
+        <li>
+          IEEE Xtreme 17.0 — Global 24-Hour Programming Competition (IEEE),
+          ranked <strong>491</strong> out of <strong>4,231</strong> teams worldwide
+        </li>
+        <li>
+          IEEE Electric Vehicle Technology Webinar — Participant, Mar 2022
+        </li>
+        <li>
+          IEEE Paper Contest — Volunteer, Apr 2023
+        </li>
+      </ul>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="section">
+      <h2>Technical Skills</h2>
+      <span class="tag">MATLAB</span>
+      <span class="tag">Simulink</span>
+      <span class="tag">Python (Basic)</span>
+      <span class="tag">Power Electronics</span>
+      <span class="tag">Power Systems</span>
+      <span class="tag">Power Distribution</span>
+      <span class="tag">Transformers</span>
+      <span class="tag">Electrical Safety</span>
+      <span class="tag">Technical Documentation</span>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section">
+      <h2>Contact</h2>
+      <p>
+        GitHub:
+        <a href="https://github.com/sherilgeo" target="_blank">
+          github.com/sherilgeo
+        </a>
+      </p>
+    </div>
+
+    <footer>
+      © 2026 Sheril Mary Geo
+    </footer>
+
   </div>
-
-  <!-- ===== CERTIFICATIONS ===== -->
-  <div class="section">
-    <h2>Certifications & Professional Activities</h2>
-    <ul>
-      <li>
-        Renewable Energy Technology Fundamentals — Coursera (University of Colorado Boulder), Jan 2025
-        (<a href="Renewable energy technology fundamentals - coursera.pdf" target="_blank">Certificate</a>)
-      </li>
-
-      <li>
-        IEEE Xtreme 17.0 — Global 24-Hour Programming Competition (IEEE)<br>
-        Ranked <strong>491</strong> out of <strong>4,231</strong> teams worldwide
-        (<a href="IEEE XTREME.pdf" target="_blank">Certificate</a>)
-      </li>
-
-      <li>
-        IEEE Electric Vehicle Technology Webinar — Participant, Mar 2022
-        (<a href="IEEE - EV Webinar.jpg" target="_blank">Certificate</a>)
-      </li>
-
-      <li>
-        IEEE Paper Contest — Volunteer, Apr 2023
-        (<a href="Volunteering (IEEE - Paper Contest).pdf" target="_blank">Certificate</a>)
-      </li>
-    </ul>
-  </div>
-
-  <!-- ===== SKILLS ===== -->
-  <div class="section">
-    <h2>Technical Skills</h2>
-    <span class="tag">MATLAB</span>
-    <span class="tag">Simulink</span>
-    <span class="tag">Python (Basic)</span>
-    <span class="tag">Power Electronics</span>
-    <span class="tag">Power Distribution</span>
-    <span class="tag">Transformers</span>
-    <span class="tag">Electrical Safety</span>
-    <span class="tag">Technical Documentation</span>
-  </div>
-
-  <!-- ===== CONTACT ===== -->
-  <div class="section">
-    <h2>Contact</h2>
-    <p>
-      <strong>GitHub:</strong>
-      <a href="https://github.com/sherilgeo" target="_blank">github.com/sherilgeo</a><br>
-    </p>
-  </div>
-
 </body>
 </html>
